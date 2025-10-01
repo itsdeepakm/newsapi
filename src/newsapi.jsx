@@ -40,6 +40,13 @@ export default function NewsApi() {
                 <button onClick={()=>addtowatchlist(item)}>Add to Watchlist</button>
                 </div>
         })}
+        <h2>my watchlist</h2>
+        {watchlist&&watchlist.map((item,index)=>{
+            return <div key={index} style={{border:"1px solid black",margin:"10px",padding:"10px"}}>
+                <h2>{item.title}</h2>
+                <p>{item.description}</p>
+                </div>
+        })}
      </div>
     
     </>
